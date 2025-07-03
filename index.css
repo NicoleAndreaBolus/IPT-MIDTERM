@@ -3,6 +3,10 @@ body {
       transition: background 0.3s, color 0.3s;
 }
 
+html {
+  scroll-behavior: auto;
+}
+
 
 /* Loader */
 

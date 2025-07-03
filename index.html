@@ -54,10 +54,10 @@
     </div>
     <div class="offcanvas-body">
       <ul class="navbar-nav text-end">
-        <li class="nav-item"><a class="nav-link gradient-nav" href="#" data-bs-dismiss="offcanvas">Home</a></li>
-        <li class="nav-item"><a class="nav-link gradient-nav" href="#about" data-bs-dismiss="offcanvas">About</a></li>
-        <li class="nav-item"><a class="nav-link gradient-nav" href="#projects" data-bs-dismiss="offcanvas">Projects</a></li>
-        <li class="nav-item"><a class="nav-link gradient-nav" href="#contact" data-bs-dismiss="offcanvas">Contact</a></li>
+        <li class="nav-item"><a class="nav-link gradient-nav" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link gradient-nav" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link gradient-nav" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link gradient-nav" href="#contact">Contact</a></li>
       </ul>
     </div>
   </div>
@@ -188,6 +188,42 @@
     }
   });
 </script>
+
+<!-- to make drawer link working -->
+<script>
+  document.querySelectorAll('#offcanvasMenu .nav-link').forEach(link => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      const targetId = this.getAttribute('href');
+      const target = document.querySelector(targetId);
+      const navOffset = document.querySelector('.navbar').offsetHeight || 80;
+
+      const offcanvasEl = document.getElementById('offcanvasMenu');
+      let offcanvas = bootstrap.Offcanvas.getInstance(offcanvasEl);
+      if (!offcanvas) {
+        offcanvas = new bootstrap.Offcanvas(offcanvasEl);
+      }
+
+      // Hide the menu first
+      offcanvas.hide();
+
+      // Scroll after delay (to allow offcanvas to close)
+      setTimeout(() => {
+        if (target) {
+          const elementPosition = target.getBoundingClientRect().top + window.scrollY;
+          const offsetPosition = elementPosition - navOffset;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth"
+          });
+        }
+      }, 300);
+    });
+  });
+</script>
+
 
 
 </body>
