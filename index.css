@@ -287,7 +287,7 @@ footer {
   }
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 740px) {
   .hero h1 {
     font-size: 1.8rem;
   }
