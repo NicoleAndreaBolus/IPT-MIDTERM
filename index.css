@@ -414,6 +414,7 @@ html {
     0 0 30px rgba(168, 85, 247, 0.15);
 }
 
+
 /* Background GIF for Projects */
 .bg-gif-section {
   position: absolute;
@@ -454,13 +455,17 @@ html {
   font-family: 'Orbitron', sans-serif;
   font-weight: 700;
   font-size: 2.5rem;
-  background: linear-gradient(90deg, #6f1cbd, #3387cc);
+  background: linear-gradient(90deg, #060308, #240738, #541e61);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-transform: uppercase;
   letter-spacing: 1px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
 }
+
 
 /* Glow border effect */
 .project-card::before {
