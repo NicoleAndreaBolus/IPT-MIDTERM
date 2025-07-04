@@ -633,7 +633,25 @@ footer {
   .hero p {
     font-size: 1rem;
   }
+
+  .contact h3 {
+    font-size: 1.8rem;
+  }
+
+  .tools h3 {
+    font-size: 1.8rem;
+  }
+
+  /* ADD THESE: */
+  .tools-section h2,
+  .contact-section h2,
+  #projects h2 {
+    font-size: 1.6rem;
+  }
 }
+
+
+
 
 /* photo */
 
