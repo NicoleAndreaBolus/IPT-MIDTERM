@@ -418,6 +418,61 @@ html {
   z-index: 1;
 }
 
+.glass-card {
+  width: 120px;
+  height: 120px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 0 10px rgba(0, 242, 254, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  margin: 4px auto;
+}
+
+.glass-card:hover {
+  box-shadow: 0 0 15px rgba(0, 242, 254, 0.3);
+  transform: translateY(-3px);
+}
+
+.tool-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.tool-name {
+  margin-top: 0.3rem;
+  font-size: 0.75rem;
+  color: #00f2fe;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.tools-flex-wrapper {
+  overflow-x: auto;
+  white-space: nowrap;
+  gap: 1rem;
+  padding-bottom: 1rem;
+}
+
+.tools-flex-wrapper::-webkit-scrollbar {
+  height: 6px;
+}
+
+.tools-flex-wrapper::-webkit-scrollbar-thumb {
+  background-color: #00f2fe;
+  border-radius: 10px;
+}
+
+.tools-flex-wrapper .glass-card {
+  min-width: 120px;
+  flex: 0 0 auto;
+}
 
 /* Project Section */
 #projects {
@@ -732,4 +787,36 @@ footer {
   filter: invert(1);
 }
 
+@media (max-width: 576px) {
+  .glass-card {
+    width: 100px;
+    height: 100px;
+    margin: 2px auto;
+  }
 
+  .tool-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .tool-name {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .glass-card {
+    width: 100px;
+    height: 100px;
+    margin: 2px auto;
+  }
+
+  .tool-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .tool-name {
+    font-size: 0.7rem;
+  }
+}
