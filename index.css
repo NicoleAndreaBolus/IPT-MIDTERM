@@ -159,12 +159,15 @@ html {
 
 
 .hero {
+  color: white;
   position: relative;
+  overflow: hidden;
+  padding: 100px 20px;
   min-height: 100vh;
+  text-align: center;
   display: flex;
   align-items: center;
-  overflow: hidden;
-  color: white;
+  justify-content: center;
 }
 
 .bg-video {
@@ -190,16 +193,6 @@ html {
 .hero .container {
   z-index: 2;
   position: relative;
-}
-
-.hero {
-  color: white;
-  padding: 100px 20px;
-  min-height: 100vh;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .hero-photo {
@@ -277,11 +270,6 @@ html {
   pointer-events: none;
 }
 
-
-/* Navy Blue Left Panel */
-.bg-navy {
-  background-color: #001f3f;
-}
 
 /* Card */
 .nicodex-card h3 {
@@ -381,6 +369,39 @@ html {
   }
 }
 
+/* Tools Section */
+.tools-section {
+  background: linear-gradient(135deg, #0d001e, #000428, #001e3c);
+  position: relative;
+  z-index: 1;
+  border-top: 2px solid #00f2fe;
+  border-bottom: 2px solid #a855f7;
+  box-shadow:
+    0 0 15px rgba(0, 242, 254, 0.3),
+    0 0 30px rgba(168, 85, 247, 0.15);
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.tool-icon {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  filter: drop-shadow(0 0 6px rgba(0, 242, 254, 0.2));
+}
+
+.tool-icon:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 10px rgba(0, 242, 254, 0.5));
+}
+
+.tool-name {
+  font-family: 'Orbitron', sans-serif;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #00f2fe;
+}
 
 
 /* Project Section */
@@ -564,24 +585,7 @@ footer {
   font-size: 0.9rem;
 }
 
-.social-icons a {
-  color: white;
-  font-size: 1.5rem;
-  margin: 0 10px;
-  transition: color 0.3s;
-}
 
-.social-icons a:hover {
-  color: #00f2fe;
-}
-
-.theme-toggle {
-  cursor: pointer;
-  font-size: 1.3rem;
-  color: white;
-  background: none;
-  border: none;
-}
 
 @media (min-width: 768px) {
   .hero h1 {
